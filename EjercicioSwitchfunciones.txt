@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+float num1, num2, total;  // variable global
+
+void sumar(){
+	total = num1 + num2;
+	printf("\n %f + %f = %f", num1, num2, total);
+}
+
+float restar(){    // las funciones devuelven un valor, tipo de dato
+	total = num1 - num2;
+	return total;
+}
+
+void multiplicar(float n1, float n2){
+	total = n1 * n2;
+	printf("\n %f * %f = %f", n1, n2, total);
+}
+
+float dividir(float n1, float n2){
+    return (n1 / n2);
+}
+
+
+void SolicitarDatos()
+{
+    printf("Digite un numero: ");
+	scanf("%f",&num1);
+	
+	printf("Digite otro numero: ");
+	scanf("%f",&num2);
+}
+
+void menu(){
+	
+int opcion = 0;
+
+restar();
+
+
+ do {
+ 	printf("\n1- sumar");
+ 	printf("\n2- restar");
+ 	printf("\n3- multiplicar");
+ 	printf("\n4- salir");
+ 	printf("\nDigite su opcion");
+ 	scanf("%i", &opcion);
+ 	
+ 	switch(opcion){
+ 		case 1: SolicitarDatos();
+		        sumar(); 
+		 		break;
+ 		case 2: SolicitarDatos();
+		        printf("\n %f - %f = %f",num1, num2, restar());
+		 		break;
+		case 3: SolicitarDatos();
+		        multiplicar(num1, num2); 
+		 		break;
+		case 4: SolicitarDatos();
+		        printf("\n %f / %f = %f",num1, num2, dividir(num1, num2));
+		 		break;
+ 		case 4: break;
+ 		default: printf("Valor incorrecto"); 
+		 		break;
+ 	}
+ 
+ } while(opcion!= 4);  // 3 false
+
+	
+}
+int main() {
+	
+	calcularnuevosalario(salario_empleado,10);
+	printf("\nSalario Actual %f", salario_empleado);
+
+  //  menu();
+
+    return 0;
+}
