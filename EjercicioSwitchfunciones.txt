@@ -59,7 +59,7 @@ restar();
 		case 4: SolicitarDatos();
 		        printf("\n %f / %f = %f",num1, num2, dividir(num1, num2));
 		 		break;
- 		case 4: break;
+ 		case 5: break;
  		default: printf("Valor incorrecto"); 
 		 		break;
  	}
@@ -68,10 +68,35 @@ restar();
 
 	
 }
+int cantidad;
+float precio;
+
+float Cantidad(){
+	printf("\nDigite la cantidad: ");
+	scanf("%i",&cantidad);
+	return cantidad;
+}
+
+float CalcularPrecio(float cant)
+{
+
+	if ((cant > 0) && (cant <= 10)){
+		precio = 20;
+	} else if (cant>10) {
+		precio = 15;
+	} else {
+		printf("\nDigite una cantida correcta"); 
+	}
+	
+	return  cant * precio;
+}
+
 int main() {
 	
-	calcularnuevosalario(salario_empleado,10);
-	printf("\nSalario Actual %f", salario_empleado);
+printf("El precio a pagar es: %f", CalcularPrecio(Cantidad()));
+	
+//	calcularnuevosalario(salario_empleado,10);
+//	printf("\nSalario Actual %f", salario_empleado);
 
   //  menu();
 
