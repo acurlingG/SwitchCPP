@@ -102,3 +102,25 @@ printf("El precio a pagar es: %f", CalcularPrecio(Cantidad()));
 
     return 0;
 }
+
+
+1- cant_estudiantes, notas, promedio,contNotasAltas,i
+1.1 notas = 0, i =0
+1.2 promedio = 0
+1.3 contNotasAltas = 0
+2- Solicite la cant_estudiantes = cant
+3- mientras i <= cant    
+	3.ingresar notas       75
+        3.1 promedio = promedio + notas 
+        i = i + 1
+   fin Mientras
+promedio = promedio / cant_estudiantes  
+
+4.i = 0
+5.  mientras i <= cant_estudiantes  
+        5.1 ingresar notas      
+	5.1 Si notas > promedio
+	   5.1.1 contNotasAltas = contNotasAltas +1
+   fin Mientras
+
+6. imprimir contNotasAltas
